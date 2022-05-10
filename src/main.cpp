@@ -134,6 +134,6 @@ void loop() {
     sprintf(buf, "RSSI Wi-FI: %d, RSSI Bluetooth: %d", RSSIWiFi, RSSIBluetooth);
     ESP_BT.println(buf);}
   else
-  {sprintf(buf, "RSSI Wi-FI: %d; Bluetooth neconectat", RSSIWiFi);
+  {sprintf(buf, "RSSI Wi-FI: %d; Dispozitiv Bluetooth neconectat", RSSIWiFi);
   ESP_BT.println(buf);}
 }
