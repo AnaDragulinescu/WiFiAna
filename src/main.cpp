@@ -13,7 +13,7 @@ byte RSSIBluetooth;
 //x se va înlocui cu prefixul echipei
 //y se va înlocui cu numărul echipei
 
-byte addr[6] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 }; //adresa MAC BT clasic
+byte addr[6] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 }; //initializare adresa MAC BT clasic
 BluetoothSerial ESP_BT;
 struct SSID_RSSI_MAXIM {int nr_retele; 
 char* ssid_maxim[L];
@@ -80,7 +80,7 @@ unsigned long mom_antMili = 0;
 unsigned long interval = 30000; //30 de secunde
 unsigned long mom_curentMili = millis();
 // daca s-a pierdut conexiunea
-if ((WiFi.status() != WL_CONNECTED) && (mom_curentMili – mom_antMili >=interval)) {
+if ((WiFi.status() != WL_CONNECTED) && (mom_curentMili - mom_antMili >=interval)) {
   Serial.print(millis());
   Serial.println("Reconectare la reteaua Wi-Fi...");
   WiFi.disconnect();
